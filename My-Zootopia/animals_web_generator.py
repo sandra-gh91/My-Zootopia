@@ -15,16 +15,13 @@ def generate_animals_html(animals_data):
         location = ",".join(animal["locations"])
         diet = animal["characteristics"].get("diet","N/A")
         a_type = animal["characteristics"].get("type","N/A")
-        animals_html += f"""
-        <li class="cards__item">
-            <h2 class="card__title">{name}</h2>
-            <p class="card__text">
-                <strong>Location:</strong> {location}<br>
-                <strong>Diet:</strong> {diet}<br>
-                <strong>Type:</strong> {a_type}
-            </p>
-        </li>
-        """
+
+        animals_html += '<li class="cards__item">\n'
+        animals_html += f"Name: {name}<br/>\n"
+        animals_html += f"Diet: {diet}<br/>\n"
+        animals_html += f"Location: {location}<br/>\n"
+        animals_html += f"Type: {a_type}<br/>\n"
+        animals_html += '</li>\n'
     return animals_html
 
 
