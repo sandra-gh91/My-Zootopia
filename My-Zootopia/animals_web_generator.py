@@ -17,11 +17,14 @@ def generate_animals_html(animals_data):
         a_type = animal["characteristics"].get("type","N/A")
 
         animals_html += '<li class="cards__item">\n'
-        animals_html += f"Name: {name}<br/>\n"
-        animals_html += f"Diet: {diet}<br/>\n"
-        animals_html += f"Location: {location}<br/>\n"
-        animals_html += f"Type: {a_type}<br/>\n"
+        animals_html += f'  <div class="card__title">{name}</div>\n'
+        animals_html += '  <p class="card__text">\n'
+        animals_html += f'      <strong>Diet:</strong> {diet}<br/>\n'
+        animals_html += f'      <strong>Location:</strong> {location}<br/>\n'
+        animals_html += f'      <strong>Type:</strong> {a_type}<br/>\n'
+        animals_html += '  </p>\n'
         animals_html += '</li>\n'
+
     return animals_html
 
 
